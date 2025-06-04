@@ -4,7 +4,7 @@ import { FaUsers, FaChartLine, FaShieldAlt, FaTachometerAlt, FaClock, FaHeadset,
 const features = [
 
     {
-        icon: <FaUsers size={50} />, // ⬅️ Increased from 40 to 50
+        icon: <FaUsers size={50} />,
         title: 'Expert Team',
         description: 'Our team of professionals is skilled in the latest technologies and best practices.',
     },
