@@ -4,7 +4,7 @@ const Client_Testamonials = () => {
 
     return (
 
-        <div className="flex flex-col mt-8">
+        <div className="flex flex-col mt-8 px-10">
 
             {/* testamonialsHeader */}
 
