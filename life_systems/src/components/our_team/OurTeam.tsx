@@ -11,23 +11,23 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
   return (
     <div className="flex flex-col items-center">
       <div
-        className="h-40 w-40 rounded-full overflow-hidden bg-white flex items-center justify-center transition-shadow duration-300 ease-in-out hover:shadow-[0_8px_30px_rgba(121,66,129,0.7)]"
+        className="h-50 w-50 rounded-full overflow-hidden bg-white flex items-center justify-center transition-shadow duration-300 ease-in-out hover:shadow-[0_8px_30px_rgba(121,66,129,0.7)]"
         style={{ boxShadow: '0 10px 25px rgba(121, 66, 129, 0.6)' }}
       >
         <Image
           src={member.image}
           alt={member.name}
-          width={160}
-          height={160}
+          width={200}
+          height={200}
           quality={100}
           className="rounded-full object-cover hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div className="text-center mt-3 px-2">
-        <h3 className="text-xl font-bold text-[#6a2971]" style={{ fontFamily: 'Inter_24pt-Bold', fontWeight: 700 }}>
+        <h3 className="text-2xl font-bold text-[#6a2971]" >
           {member.name}
         </h3>
-        <p className="text-base font-bold text-[#da171a]" style={{ fontFamily: 'Inter_24pt-Bold', fontWeight: 700 }}>
+        <p className="text-lg font-bold text-[#da171a]" >
           {member.role}
         </p>
       </div>
@@ -65,14 +65,14 @@ const TeamSection = () => {
   ];
 
   return (
-    <div className="py-8 bg-white" style={{ fontFamily: 'Inter_18pt-ExtraBold' }}>
+    <div className="py-8 bg-white">
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-20">
           <h1 className="text-[48px] leading-tight">
-            <span style={{ color: '#794281', fontWeight: 1000 }}>Our</span>{' '}
-            <span style={{ color: '#dd2e31', fontWeight: 1000 }}>Team</span>
+            <span>Our</span>{' '}
+            <span>Team</span>
           </h1>
-          <p className="mt-2 max-w-2xl mx-auto text-base text-black" style={{ fontWeight: 500 }}>
+          <p className="mt-2 max-w-2xl mx-auto text-base text-black">
             Each member's unique skills combine to create an unstoppable force for growth and impact
           </p>
         </div>
