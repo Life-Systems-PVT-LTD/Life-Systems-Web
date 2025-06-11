@@ -1,141 +1,134 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const testimonials = [
-
-    {
-        name: "John Doe",
-        position: "CEO, TechCorp",
-        message:
-            "Life Systems helped us transform our outdated systems into a powerful digital platform. Their expertise and attention to detail exceeded our expectations.",
-        image: "/testimonials_imgs/John.jpg",
-    },
-
-    {
-        name: "Jane Smith",
-        position: "Marketing Director, FitLife",
-        message:
-            "The mobile app Life Systems developed for us has revolutionized how we interact with customers. User engagement has increased by 200% since launch.",
-        image: "/testimonials_imgs/Jane.jpg",
-    },
-
-    {
-        name: "Robert Johnson",
-        position: "Owner, StyleShop",
-        message:
-            "Working with Life Systems was a game-changer for our e-commerce business. Their custom solution improved our conversion rates and streamlined operations.",
-        image: "/testimonials_imgs/Robert.jpg",
-    },
-
+  {
+    name: "John Doe",
+    position: "CEO, TechCorp",
+    message:
+      "Life Systems helped us transform our outdated systems into a powerful digital platform. Their expertise and attention to detail exceeded our expectations.",
+    image: "/testimonials_imgs/John.jpg",
+  },
+  {
+    name: "Jane Smith",
+    position: "Marketing Director, FitLife",
+    message:
+      "The mobile app Life Systems developed for us has revolutionized how we interact with customers. User engagement has increased by 200% since launch.",
+    image: "/testimonials_imgs/Jane.jpg",
+  },
+  {
+    name: "Robert Johnson",
+    position: "Owner, StyleShop",
+    message:
+      "Working with Life Systems was a game-changer for our e-commerce business. Their custom solution improved our conversion rates and streamlined operations.",
+    image: "/testimonials_imgs/Robert.jpg",
+  },
 ];
 
-export default function TestimonialCarousel() {
+export default function TestimonialSlider() {
+  const [index, setIndex] = useState(0);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    const [index, setIndex] = useState(0);
+  useEffect(() => {
+    timeoutRef.current = setTimeout(() => {
+      setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    }, 6000);
 
-    const prev = () => {
-        setIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
+  }, [index]);
 
-    const next = () => {
-        setIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
-    };
+  const prev = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+  };
 
-    return (
+  const next = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+  };
 
-        <section className="py-12 bg-gray-100" id="testimonials">
+  return (
+    <section className="py-12 bg-gray-100" id="testimonials">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row justify-center gap-3 mb-5 text-center sm:text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#24224C]">Client</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#6A2971]">Testimonials</h2>
+        </div>
 
-            <div className="flex flex-col mt-8 px-20 lg:px-30">
+        <div className="flex justify-center mb-10 px-4 sm:px-0">
+          <p className="text-center text-sm sm:text-base md:text-lg font-semibold text-[#746f6b] max-w-3xl">
+            What our clients say about our services and solutions
+          </p>
+        </div>
 
-                {/* testamonialsHeader */}
-
-                <div className="flex flex-row justify-center">
-
-                    <span className="text-[#24224C] text-[40px] font-bold">Client</span>&nbsp;&nbsp;
-                    <span className="text-[#6A2971] text-[40px] font-bold">Testimonials</span>
-
+        {/* Slider Container */}
+        <div className="overflow-hidden relative rounded-2xl shadow-xl bg-white">
+          {/* Sliding flex container */}
+          <div
+            className="flex transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(-${index * 100}%)` }}
+          >
+            {testimonials.map((t, i) => (
+              <div key={i} className="min-w-full p-6 sm:p-9">
+                <p className="text-gray-700 italic text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+                  “{t.message}”
+                </p>
+                <div className="flex items-center gap-4 sm:gap-6">
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    width={72}
+                    height={72}
+                    className="rounded-full border-4 border-[#6A2971]"
+                    priority={true}
+                  />
+                  <div>
+                    <h5 className="font-semibold text-lg sm:text-xl text-[#24224C]">{t.name}</h5>
+                    <p className="text-sm sm:text-base text-gray-500">{t.position}</p>
+                  </div>
                 </div>
+              </div>
+            ))}
+          </div>
 
-                {/* testamonialsHeader */}
+          {/* Controls */}
+          <button
+            onClick={prev}
+            aria-label="Previous testimonial"
+            className="absolute top-1/2 left-4 sm:left-6 -translate-y-1/2 text-[#6A2971] text-4xl sm:text-5xl hover:text-purple-800"
+          >
+            ‹
+          </button>
+          <button
+            onClick={next}
+            aria-label="Next testimonial"
+            className="absolute top-1/2 right-4 sm:right-6 -translate-y-1/2 text-[#6A2971] text-4xl sm:text-5xl hover:text-purple-800"
+          >
+            ›
+          </button>
+        </div>
 
-
-                {/* testamonialdescription */}
-
-                <div className="flex flex-row justify-center p-5 mb-20">
-
-                    <p className="text-[#666666] text-center text-[17.6px] font-normal">What our clients say about our services and solutions</p>
-
-                </div>
-
-                {/* testamonialdescription */}
-
-
-                {/* testamonialContent */}
-
-                <div className="bg-white p-9 lg:px-25 rounded-xl shadow-md relative">
-                    
-                    <div className="mb-4">
-                        <i className="fas fa-quote-left text-[#E1D4E3] text-3xl"></i>
-                    </div>
-
-                    <p className="text-gray-700 text-start italic mx-5 mb-6">{testimonials[index].message}</p>
-
-                    <div className="flex items-center mx-5 gap-4">
-
-                        <Image
-                            width={64}
-                            height={64}
-                            src={testimonials[index].image}
-                            alt={testimonials[index].name}
-                            className="w-16 h-16 rounded-full border-2 border-[#6A2971]"
-                        />
-
-                        <div className="text-left">
-                            <h5 className="text-lg font-semibold">{testimonials[index].name}</h5>
-                            <p className="text-sm text-gray-500">{testimonials[index].position}</p>
-                        </div>
-
-                    </div>
-
-                    {/* Controls */}
-                    <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-
-                        <button onClick={prev} className="text-[#6A2971] text-6xl hover:text-purple-800">
-                            ‹
-                        </button>
-
-                    </div>
-
-                    <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-
-                        <button onClick={next} className="text-[#6A2971] text-6xl hover:text-purple-800">
-                            ›
-                        </button>
-
-                    </div>
-
-                </div>
-
-                {/* testamonialContent */}
-
-                {/* Indicators */}
-                <div className="mt-4 flex justify-center pt-15 mb-15 gap-2">
-                    {testimonials.map((_, i) => (
-                        <button
-                            key={i}
-                            onClick={() => setIndex(i)}
-                            className={`w-3 h-3 rounded-full ${index === i ? "bg-[#6A2971]" : "bg-[#E2E2E2]"}`}
-                        ></button>
-                    ))}
-                </div>
-                {/* Indicators */}
-
-            </div>
-
-        </section>
-
-    );
-
+        {/* Dots */}
+        <div className="flex justify-center gap-3 mt-8">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`w-3 sm:w-4 h-3 sm:h-4 rounded-full ${
+                index === i ? "bg-[#6A2971]" : "bg-[#E2E2E2]"
+              }`}
+              aria-label={`Go to testimonial ${i + 1}`}
+            ></button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
+
+
