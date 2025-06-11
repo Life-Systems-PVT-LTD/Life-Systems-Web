@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
 
         <section className="p-10 bg-white text-center max-w-full">
 
-            <div className="max-w-7xl mx-auto px-2">
+            <div className="max-w-7xl mx-auto px-2" id="why_us">
 
                 <h2 className="text-4xl font-bold text-[#24224C] mb-4">Why Choose Us</h2>
 

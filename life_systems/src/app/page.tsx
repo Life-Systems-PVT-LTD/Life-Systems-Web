@@ -1,4 +1,5 @@
 import TestimonialSlider from "@/components/client_testimonials/Client_Testimonials";
+import Contact from "@/components/contact/Contact";
 import OurProtfolio from "@/components/our_protfolio/OurProtfolio";
 import OurServices from "@/components/our_services/OurServices";
 import TeamSection from "@/components/our_team/OurTeam";
@@ -107,9 +108,15 @@ export default function Home() {
 
             </div>
 
-            <div className="mb-20">
+            <div className="mb-16">
 
                 <TestimonialSlider/>
+
+            </div> 
+
+            <div className="mb-20">
+
+                <Contact/>
 
             </div> 
 

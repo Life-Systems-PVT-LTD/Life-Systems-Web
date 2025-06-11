@@ -6,14 +6,14 @@ const Contact = () => {
 
     return (
 
-        <div className="flex flex-col py-20 px-10">
+        <div className="flex flex-col py-20 px-10" id="contact">
 
             {/* contactHeader */}
 
             <div className="flex flex-row justify-center">
 
-                <span className="text-[#24224C] text-[40px] font-bold">Get In</span>&nbsp;&nbsp;
-                <span className="text-[#E02020] text-[40px] font-bold">Touch</span>
+                <span className="text-[#24224C] text-4xl font-bold">Get In</span>&nbsp;&nbsp;
+                <span className="text-[#E02020] text-4xl font-bold">Touch</span>
 
             </div>
 
@@ -24,7 +24,7 @@ const Contact = () => {
 
             <div className="flex flex-row justify-center p-5">
 
-                <p className="text-[#666666] text-center text-[17.6px] font-normal">Have a project in mind? We&apos;d love to hear from you!</p>
+                <p className="text-[#666666] text-center text-[18px] font-semibold">Have a project in mind? We&apos;d love to hear from you!</p>
 
             </div>
 
@@ -39,7 +39,7 @@ const Contact = () => {
                 <div className="flex flex-col bg-[#24224C] rounded-lg space-y-6">
 
                     {/* Contact Item */}
-                    <div className="flex flex-row items-start gap-4 mt-6 px-8">
+                    <div className="flex flex-row items-start gap-2 mt-6 px-5">
                         <div className={styles.contactIcon}>
                             <div className="text-[#6A2971] text-2xl">
                                 <FaMapMarkerAlt />
@@ -48,11 +48,11 @@ const Contact = () => {
 
                         <div>
                             <h4 className="text-lg font-semibold text-white">Our Location</h4>
-                            <p className="text-[#F8F8F8]">123 Tech Street, Silicon Valley, CA 94000</p>
+                            <p className="text-[#F8F8F8]">217/2, Horagolla, Ganemulla, Sri Lanka</p>
                         </div>
                     </div>
 
-                    <div className="flex flex-row items-start gap-4 px-8">
+                    <div className="flex flex-row items-start gap-2 px-5 mb-6">
                         <div className={styles.contactIcon}>
                             <div className="text-[#6A2971] text-2xl">
                                 <FaEnvelope />
@@ -60,11 +60,11 @@ const Contact = () => {
                         </div>
                         <div>
                             <h4 className="text-lg font-semibold text-white">Email Us</h4>
-                            <p className="text-[#F8F8F8]">info@lifesystems.com</p>
+                            <p className="text-[#F8F8F8] text-sm">lifesystems.contact@gmail.com</p>
                         </div>
                     </div>
 
-                    <div className="flex flex-row items-start gap-4 px-8">
+                    <div className="flex flex-row items-start gap-2 px-5">
                         <div className={styles.contactIcon}>
                             <div className="text-[#6A2971] text-2xl">
                                 <FaPhoneAlt />
@@ -72,11 +72,11 @@ const Contact = () => {
                         </div>
                         <div>
                             <h4 className="text-lg font-semibold text-white">Call Us</h4>
-                            <p className="text-[#F8F8F8]">+1 (555) 123-4567</p>
+                            <p className="text-[#F8F8F8]">+94 71 254 5103</p>
                         </div>
                     </div>
 
-                    <div className="flex flex-row items-start gap-4 px-8 mb-6">
+                    <div className="flex flex-row items-start gap-2 px-5 mb-6">
                         <div className={styles.contactIcon}>
                             <div className="text-[#6A2971] text-2xl">
                                 <FaClock />
@@ -84,7 +84,7 @@ const Contact = () => {
                         </div>
                         <div>
                             <h4 className="text-lg font-semibold text-white">Business Hours</h4>
-                            <p className="text-[#F8F8F8]">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p className="text-[#F8F8F8]">Monday - Friday: 9:00 AM - 5:00 PM</p>
                         </div>
                     </div>
 

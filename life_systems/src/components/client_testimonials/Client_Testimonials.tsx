@@ -50,7 +50,7 @@ export default function TestimonialSlider() {
 
   return (
     <section className="py-12 bg-gray-100" id="testimonials">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" id="testimonials">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-center gap-3 mb-5 text-center sm:text-left">
           <h2 className="text-4xl font-bold text-[#24224C]">Client</h2>

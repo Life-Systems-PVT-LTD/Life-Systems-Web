@@ -5,7 +5,7 @@ const OurServices = () => {
 
     return (
 
-        <div className="flex flex-col mb-2">
+        <div className="flex flex-col mb-2" id="services">
 
             {/* servicesHeader */}
 

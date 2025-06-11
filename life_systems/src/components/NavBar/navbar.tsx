@@ -24,28 +24,28 @@ const Navbar = () => {
 
                     <div className="hidden md:flex items-center space-x-5">
 
-                        <Link href="/"className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
+                        <Link href="/" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Home
                         </Link>
 
-                        <Link href="/services" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
+                        <a href="#services" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Services
-                        </Link>
-                        <Link href="/portfolio" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
+                        </a>
+                        <a href="#portfolio" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Portfolio
-                        </Link>
-                        <Link href="/why-us" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
+                        </a>
+                        <a href="#why_us" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Why Us
-                        </Link>
-                        <Link href="/testimonials" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
+                        </a>
+                        <a href="#testimonials" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Testimonials
-                        </Link>
-                        <Link href="/contact" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
+                        </a>
+                        <a href="#contact" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Contact Us
-                        </Link>
-                        <Link href="/get-started" className="bg-[#55185C] text-white px-4 py-2 rounded-md text-md transition-all duration-500 hover:-translate-y-1 transform">
+                        </a>
+                        <a href="#contact" className="bg-[#55185C] text-white px-4 py-2 rounded-md text-md transition-all duration-500 hover:-translate-y-1 transform">
                             Get Started
-                        </Link>
+                        </a>
                         
                     </div>
 

@@ -44,7 +44,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 
         {children}
 
-        <div className="mt-16">
+        <div className="mt-14">
 
           <Footer />
 
