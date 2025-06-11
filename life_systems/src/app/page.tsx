@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function Home() {
 
     return (
+        
         <section className="relative bg-gray-100 min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-16 overflow-hidden">
             {/* Diagonal Shape */}
             <div className="absolute bottom-0 left-0 w-full h-[50%] z-0 pointer-events-none">
