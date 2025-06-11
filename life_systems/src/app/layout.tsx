@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import OurServices from "@/components/our_services/OurServices";
 import Footer from "../components/Footer/Footer";
 
 import Navbar from "../components/NavBar/navbar";
@@ -44,7 +43,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         </div>
 
         {children}
-        <OurServices />
 
         <div className="mt-16">
 
