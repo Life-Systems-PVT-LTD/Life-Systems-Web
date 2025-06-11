@@ -131,7 +131,7 @@ const Contact = () => {
                         </div>
                         <div className="sm:col-span-2 relative">
                             <textarea
-                                rows="4"
+                                rows={4}
                                 placeholder=""
                                 className="peer w-full px-3 py-4 bg-inherit border-2 rounded-lg outline-none transition border-[#dee2e6] focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB] resize-none"
                             ></textarea>
@@ -156,77 +156,3 @@ const Contact = () => {
 }
 
 export default Contact;
-
-
-// {/* Contact Section */}
-//             <section id="contact" className="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
-//                 <div className="container mx-auto px-6">
-//                     <div className="text-center mb-12">
-//                         <h2 className="text-4xl font-bold text-[#2c2b49] dark:text-white mb-4">Get In Touch</h2>
-//                         <p className="text-xl text-gray-600 dark:text-gray-300">Have a project in mind? We&apos;d love to hear from you!</p>
-//                     </div>
-//                     <div className="grid lg:grid-cols-2 gap-12">
-//                         <div>
-//                             <div className="grid md:grid-cols-2 gap-8 mb-8">
-//                                 <div>
-//                                     <h4 className="text-xl font-bold text-[#2c2b49] dark:text-white mb-2">Our Location</h4>
-//                                     <p className="text-gray-600 dark:text-gray-300">123 Tech Street, Silicon Valley, CA 94000</p>
-//                                 </div>
-//                                 <div>
-//                                     <h4 className="text-xl font-bold text-[#2c2b49] dark:text-white mb-2">Email Us</h4>
-//                                     <p className="text-gray-600 dark:text-gray-300">info@lifesystems.com</p>
-//                                 </div>
-//                                 <div>
-//                                     <h4 className="text-xl font-bold text-[#2c2b49] dark:text-white mb-2">Call Us</h4>
-//                                     <p className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
-//                                 </div>
-//                                 <div>
-//                                     <h4 className="text-xl font-bold text-[#2c2b49] dark:text-white mb-2">Business Hours</h4>
-//                                     <p className="text-gray-600 dark:text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-//                                 </div>
-//                             </div>
-//                         </div>
-
-
-
-
-//                         <div>
-//                             <form className="space-y-6">
-//                                 <div>
-//                                     <input
-//                                         type="text"
-//                                         name="name"
-//                                         placeholder="Your Name"
-//                                         className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-[#9b4b5b] focus:border-transparent outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white transition-colors`}
-//                                     />
-//                                 </div>
-//                                 <div>
-//                                     <input
-//                                         type="email"
-//                                         name="email"
-//                                         placeholder="Your Email"
-//                                         className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-[#9b4b5b] focus:border-transparent outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white transition-colors`}
-//                                     />
-//                                 </div>
-//                                 <div>
-//                                     <input
-//                                         type="text"
-//                                         name="subject"
-//                                         placeholder="Subject"
-//                                         className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-[#9b4b5b] focus:border-transparent outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white transition-colors`}
-//                                     />
-//                                 </div>
-//                                 <div>
-//                                     <textarea
-//                                         name="message"
-//                                         placeholder="Your Message"
-//                                         rows={4}
-//                                         className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-[#9b4b5b] focus:border-transparent outline-none resize-none dark:bg-gray-700 dark:border-gray-600 dark:text-white transition-colors`}
-//                                     />
-//                                 </div>
-//                                 <button className="w-full bg-[#6A2971] hover:bg-[#8a424f] disabled:bg-gray-400 text-white py-4 px-6 rounded-lg font-semibold transition-all hover:scale-105 disabled:hover:scale-100">Send Message</button>
-//                             </form>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </section>
