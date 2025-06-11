@@ -1,3 +1,4 @@
+import TestimonialSlider from "@/components/client_testimonials/Client_Testimonials";
 import OurProtfolio from "@/components/our_protfolio/OurProtfolio";
 import OurServices from "@/components/our_services/OurServices";
 import WhyChooseUs from "@/components/why_choose_us/Why_choose_us";
@@ -94,9 +95,15 @@ export default function Home() {
 
             </div>
 
-            <div>
+            <div className="mb-24">
 
                 <WhyChooseUs/>
+
+            </div>
+
+            <div className="mb-20">
+
+                <TestimonialSlider/>
 
             </div> 
 

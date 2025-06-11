@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
 
     return (
 
-        <section className="py-10 bg-white text-center">
+        <section className="p-10 bg-white text-center max-w-fit">
 
             <div className="max-w-7xl mx-auto px-2">
 
