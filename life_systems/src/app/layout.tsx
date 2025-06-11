@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+// import Head from "next/head";
+
 
 import Footer from "../components/Footer/Footer";
 
@@ -33,7 +36,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
 
     <html lang="en">
-
+      
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 
         <div>
