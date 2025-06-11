@@ -39,7 +39,9 @@ const OurServices = () => {
 
                     <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-7 p-2">
 
-                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-300 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
+                        {/* webServices */}
+
+                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-200 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
 
                             <Image src="/icons/fa6-solid--laptop-code.png" width={50} height={50} alt="lap image" priority />
 
@@ -63,10 +65,12 @@ const OurServices = () => {
                             </div>
 
                         </div>
+                        
+                        {/* webServices */}            
 
                         {/* mobileServices */}
 
-                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-300 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
+                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-200 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
 
                             <Image src="/icons/entypo--mobile.png" width={50} height={50} alt="mobilePhone image" priority />
 
@@ -98,7 +102,7 @@ const OurServices = () => {
 
                         {/* ecomerceServices */}
 
-                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-300 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
+                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-200 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
 
                             <Image src="/icons/ion--cart.png" width={50} height={50} alt="cart image" priority />
 
@@ -127,7 +131,7 @@ const OurServices = () => {
 
                         {/* clousServices */}
 
-                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-300 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
+                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-200 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
 
                             <Image src="/icons/material-symbols--cloud.png" width={50} height={50} alt="cloud image" priority />
 
@@ -157,7 +161,7 @@ const OurServices = () => {
 
                         {/* aiServices */}
 
-                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-300 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
+                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-200 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
 
                             <Image src="/icons/fa6-solid--robot.png" width={50} height={50} alt="lap image" priority />
 
@@ -187,7 +191,7 @@ const OurServices = () => {
 
                         {/* customeServices */}
 
-                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-300 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
+                        <div className="flex flex-col lg:w-[350px] max-w-full items-center bg-[#FCFCFC] p-8 rounded-2xl shadow-lg shadow-gray-200 transform transition duration-700 ease-in-out hover:-translate-y-3 hover:scale-[1.03] hover:shadow-xl">
 
                             <Image src="/icons/fa6-solid--gears.png" width={50} height={50} alt="lap image" priority />
 

@@ -76,7 +76,7 @@ const Navbar = () => {
                             </svg>
                         </label>
 
-                        <div className="hidden absolute left-0 right-0 top-16 bg-white/95 shadow-lg backdrop-blur-sm peer-checked:block origin-top transition-all duration-300 scale-y-0 peer-checked:scale-y-100">
+                        <div className="hidden absolute left-0 right-0 top-16 bg-white/95 shadow-lg backdrop-blur-sm peer-checked:block origin-top transition-all duration-500 scale-y-0 peer-checked:scale-y-100">
                             <div className="px-2 pt-2 pb-4 space-y-1">
                                 {[
                                     { href: "/", text: "Home" },
@@ -89,7 +89,7 @@ const Navbar = () => {
                                     <Link
                                         key={item.href}
                                         href={item.href}
-                                        className="block px-3 py-2 rounded-md text-base font-bold text-gray-700 hover:text-blue-600 hover:bg-gray-100/50 transition-all duration-300 transform hover:translate-x-2"
+                                        className="block px-3 py-2 rounded-md text-base font-bold text-gray-700 hover:text-blue-600 hover:bg-gray-100/50 transition-all duration-500 transform hover:translate-x-2"
                                         style={{ transitionDelay: `${index * 50}ms` }}
                                     >
                                         {item.text}
