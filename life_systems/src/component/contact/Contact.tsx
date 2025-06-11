@@ -129,7 +129,7 @@ const Contact = () => {
                                 Subject
                             </label>
                         </div>
-                        <div class="sm:col-span-2 relative">
+                        <div className="sm:col-span-2 relative">
                             <textarea
                                 rows="4"
                                 placeholder=""
