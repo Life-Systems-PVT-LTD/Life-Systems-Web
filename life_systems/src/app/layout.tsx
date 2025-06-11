@@ -19,30 +19,46 @@ export const metadata: Metadata = {
 
   title: "Life Systems",
   description: "Begining Of The New Life",
-  icons:{
+  icons: {
 
-    icon:"logos/life_systems_logo.png",
+    icon: "logos/life_systems_logo.png",
 
   }
 
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
+
   return (
+    
     <html lang="en">
+
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Intro/>
-        {children}
-      <body className={`antialiased`}>
+
         <div>
-          <Navbar/>
+
+          <Intro />
+
         </div>
+
         {children}
+
+        <body className={`antialiased`}>
+
+          <div>
+
+            <Navbar />
+
+          </div>
+
+          {children}
+
+        </body>
+
       </body>
+
     </html>
+
   );
+
 }
