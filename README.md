@@ -1,7 +1,7 @@
 # Life-Systems-Web
 
 download dependencies<br/>
-      npm i
+*      npm i
 
 run this in your terminal first to add font awesome<br/>
 *      npm install @fortawesome/fontawesome-free
