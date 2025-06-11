@@ -1,0 +1,114 @@
+
+/* testimonial.module.css */
+
+.testimonialsSection {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.testimonialsSection.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonialWrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonialCarousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.testimonialCard {
+  min-width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 0 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonialQuote {
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.testimonialText {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testimonialAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.testimonialInfo h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.testimonialInfo p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.carouselIndicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carouselIndicators .activeDot {
+  background-color: #3b82f6;
+}
+
+.carouselControlPrev,
+.carouselControlNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.carouselControlPrev {
+  left: 0;
+}
+
+.carouselControlNext {
+  right: 0;
+}

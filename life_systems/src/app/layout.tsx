@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Client_Testamonials from "@/component/client_testamonials/Client_Testamonials";
+import Client_Testimonials from "@/component/client_testimonials/Client_Testimonials";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+// import Head from "next/head";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,10 +19,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 
   title: "Life Systems",
-  description: "Begining Of The New Life",
-  icons:{
+  description: "Beginning Of The New Life",
+  icons: {
 
-    icon:"logos/life_systems_logo.png",
+    icon: "logos/life_systems_logo.png",
 
   }
 
@@ -32,13 +35,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
+      {/* <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+      </Head> */}
+
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        
+
         {children}
 
-        < Client_Testamonials />
+        < Client_Testimonials />
 
       </body>
+      
     </html>
   );
 }
