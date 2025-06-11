@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import WhyChooseUs from "./components/why_choose_us/Why_choose_us";
 
 import Footer from "../components/Footer/Footer";
 
@@ -45,7 +44,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 
         {children}
 
-        <WhyChooseUs />
         <div className="mt-16">
 
           <Footer />

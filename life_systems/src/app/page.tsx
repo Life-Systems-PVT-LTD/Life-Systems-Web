@@ -1,5 +1,6 @@
 import OurProtfolio from "@/components/our_protfolio/OurProtfolio";
 import OurServices from "@/components/our_services/OurServices";
+import WhyChooseUs from "@/components/why_choose_us/Why_choose_us";
 import Image from "next/image";
 
 export default function Home() {
@@ -87,9 +88,15 @@ export default function Home() {
 
             </div>
 
-            <div>
+            <div className="mb-24">
 
                 <OurProtfolio/>
+
+            </div>
+
+            <div>
+
+                <WhyChooseUs/>
 
             </div> 
 
