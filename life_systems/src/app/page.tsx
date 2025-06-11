@@ -1,6 +1,7 @@
 import TestimonialSlider from "@/components/client_testimonials/Client_Testimonials";
 import OurProtfolio from "@/components/our_protfolio/OurProtfolio";
 import OurServices from "@/components/our_services/OurServices";
+import TeamSection from "@/components/our_team/OurTeam";
 import WhyChooseUs from "@/components/why_choose_us/Why_choose_us";
 import Image from "next/image";
 
@@ -83,12 +84,17 @@ export default function Home() {
                 </div>
             </section> 
 
-            <div className="mt-14 mb-24">
+            <div className="mt-14 mb-28">
 
                 <OurServices/>
 
             </div>
 
+            <div className="mb-20">
+
+                <TeamSection/>
+
+            </div>
             <div className="mb-24">
 
                 <OurProtfolio/>

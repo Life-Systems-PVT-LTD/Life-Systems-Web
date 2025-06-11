@@ -6,21 +6,18 @@ import { useState, useEffect, useRef } from "react";
 const testimonials = [
   {
     name: "John Doe",
-    position: "CEO, TechCorp",
     message:
       "Life Systems helped us transform our outdated systems into a powerful digital platform. Their expertise and attention to detail exceeded our expectations.",
     image: "/testimonials_imgs/John.jpg",
   },
   {
     name: "Jane Smith",
-    position: "Marketing Director, FitLife",
     message:
       "The mobile app Life Systems developed for us has revolutionized how we interact with customers. User engagement has increased by 200% since launch.",
     image: "/testimonials_imgs/Jane.jpg",
   },
   {
     name: "Robert Johnson",
-    position: "Owner, StyleShop",
     message:
       "Working with Life Systems was a game-changer for our e-commerce business. Their custom solution improved our conversion rates and streamlined operations.",
     image: "/testimonials_imgs/Robert.jpg",
@@ -56,12 +53,12 @@ export default function TestimonialSlider() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-center gap-3 mb-5 text-center sm:text-left">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#24224C]">Client</h2>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#6A2971]">Testimonials</h2>
+          <h2 className="text-4xl font-bold text-[#24224C]">Client</h2>
+          <h2 className="text-4xl font-bold text-[#6A2971]">Testimonials</h2>
         </div>
 
         <div className="flex justify-center mb-10 px-4 sm:px-0">
-          <p className="text-center text-sm sm:text-base md:text-lg font-semibold text-[#746f6b] max-w-3xl">
+          <p className="text-center font-semibold text-[18px] text-[#666666]">
             What our clients say about our services and solutions
           </p>
         </div>
@@ -89,7 +86,6 @@ export default function TestimonialSlider() {
                   />
                   <div>
                     <h5 className="font-semibold text-lg sm:text-xl text-[#24224C]">{t.name}</h5>
-                    <p className="text-sm sm:text-base text-gray-500">{t.position}</p>
                   </div>
                 </div>
               </div>

@@ -11,7 +11,7 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
   return (
     <div className="flex flex-col items-center">
       <div
-        className="h-50 w-50 rounded-full overflow-hidden bg-white flex items-center justify-center transition-shadow duration-300 ease-in-out hover:shadow-[0_8px_30px_rgba(121,66,129,0.7)]"
+        className="h-50 w-50 rounded-full overflow-hidden bg-white flex items-center justify-center transition-shadow duration-300 ease-in-out hover:shadow-gray-300]"
         style={{ boxShadow: '0 10px 25px rgba(121, 66, 129, 0.6)' }}
       >
         <Image
@@ -68,11 +68,11 @@ const TeamSection = () => {
     <div className="py-8 bg-white">
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-20">
-          <h1 className="text-[48px] leading-tight">
-            <span>Our</span>{' '}
-            <span>Team</span>
+          <h1 className="text-4xl font-bold mb-4">
+            <span className="text-black">Our</span>{' '}
+            <span className="text-[#231e55]">Team</span>
           </h1>
-          <p className="mt-2 max-w-2xl mx-auto text-base text-black">
+          <p className="text-[#666666] text-center text-[18px] font-semibold">
             Each member's unique skills combine to create an unstoppable force for growth and impact
           </p>
         </div>

@@ -23,7 +23,7 @@ const OurServices = () => {
 
             <div className="flex flex-row justify-center p-5 mt-2">
 
-                <p className="text-[#666666] text-center text-[18px]">We deliver high-quality solutions tailored to your specific needs</p>
+                <p className="text-[#666666] text-center font-semibold text-[18px]">We deliver high-quality solutions tailored to your specific needs</p>
 
             </div>
 

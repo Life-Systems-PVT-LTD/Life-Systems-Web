@@ -57,13 +57,13 @@ export default function WhyChooseUs() {
 
     return (
 
-        <section className="p-10 bg-white text-center max-w-fit">
+        <section className="p-10 bg-white text-center max-w-full">
 
             <div className="max-w-7xl mx-auto px-2">
 
                 <h2 className="text-4xl font-bold text-[#24224C] mb-4">Why Choose Us</h2>
 
-                <p className="text-[#666666] mb-8 text-[18px] justify-center p-5 mt-2 font-bold">
+                <p className="text-[#666666] mb-8 text-[18px] justify-center p-5 mt-2 font-semibold">
 
                     Discover what sets us apart and why our clients trust us with their digital needs
 
