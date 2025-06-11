@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   title: "Life Systems",
   description: "Begining Of The New Life",
   icons: {
-
     icon: "logos/life_systems_logo.png",
 
   }
