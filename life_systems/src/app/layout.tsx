@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Client_Testamonials from "@/component/client_testamonials/Client_Testamonials";
+import Contact from "@/component/contact/Contact";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 
   title: "Life Systems",
-  description: "Begining Of The New Life",
+  description: "Beginning Of The New Life",
   icons:{
 
     icon:"logos/life_systems_logo.png",
@@ -36,7 +36,7 @@ export default function RootLayout({
         
         {children}
 
-        < Client_Testamonials />
+        < Contact />
 
       </body>
     </html>
