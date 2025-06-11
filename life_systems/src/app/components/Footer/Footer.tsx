@@ -14,12 +14,7 @@ export default function Footer() {
 
                     <div className="flex items-center space-x-3 mb-4">
 
-                        <Image
-                            src="/logos/life_systems_logo.png"
-                            alt="Life Systems Logo"
-                            width={70}
-                            height={70}
-                        />
+                        <Image src="/logos/life_systems_logo.png" alt="Life Systems Logo"width={50} height={50}priority />
 
                         <h1 className="text-white text-lg font-bold">Life Systems</h1>
 
@@ -63,7 +58,7 @@ export default function Footer() {
 
                     <h3 className="font-semibold mb-4 text-white/95 text-2xl">Company</h3>
 
-                    <ul className="space-y-4 text-md text-white/70 font-bold">
+                    <ul className="space-y-4 text-md text-white/70 font-semibold">
 
                         <li><Link href="#" className="hover:text-white transition-colors duration-500">Home</Link></li>
                         <li><Link href="#" className="hover:text-white transition-colors duration-500">About Us</Link></li>
@@ -79,7 +74,7 @@ export default function Footer() {
 
                     <h3 className="font-semibold mb-4 text-white/95 text-2xl">Services</h3>
 
-                    <ul className="space-y-4 text-md text-white/70 font-bold">
+                    <ul className="space-y-4 text-md text-white/70 font-semibold">
 
                         <li><Link href="#" className="hover:text-white transition-colors duration-500">Web Development</Link></li>
                         <li><Link href="#" className="hover:text-white transition-colors duration-500">Mobile Apps</Link></li>
@@ -131,29 +126,29 @@ export default function Footer() {
 
                 <div className="max-w-7xl mx-auto">
 
-                    <hr className="border-2 border-gray-700" />
+                    <hr className="border border-gray-700" />
                     
                 </div>
 
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 text-sm mt-5">
 
-                    <p className="text-center text-lg md:text-left text-white/80">
+                    <p className="text-center text-md md:text-left text-white/80">
 
-                        © 2023 - 2025 Life Systems . All Rights Reserved.
+                        © 2023 - 2025 Life Systems Inc . All Rights Reserved.
 
                     </p>
 
                     <div className="flex justify-center md:justify-end space-x-4">
 
-                        <Link href="#" className="hover:text-white text-lg transition-colors duration-500">Privacy Policy</Link>
+                        <Link href="#" className="hover:text-white text-md transition-colors duration-500">Privacy Policy</Link>
 
                         <span className="text-white/40 text-lg">|</span>
 
-                        <Link href="#" className="hover:text-white text-lg transition-colors duration-500">Terms of Use</Link>
+                        <Link href="#" className="hover:text-white text-md transition-colors duration-500">Terms of Use</Link>
 
                         <span className="text-white/40 text-lg">|</span>
 
-                        <Link href="#" className="hover:text-white text-lg transition-colors duration-500">Cookie Policy</Link>
+                        <Link href="#" className="hover:text-white text-md transition-colors duration-500">Cookie Policy</Link>
                     
                     </div>
 
