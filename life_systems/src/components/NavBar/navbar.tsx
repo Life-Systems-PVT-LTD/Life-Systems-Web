@@ -22,31 +22,31 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-8">
-                        <Link href="/" className="text-[#24224C] font-extrabold px-3 py-2 text-sm font-bold transition-all duration-300 hover:scale-105">
+                    <div className="hidden md:flex items-center space-x-5">
+
+                        <Link href="/"className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Home
                         </Link>
-                        <Link href="/services" className="text-[#24224C] px-3 py-2 text-sm font-bold transition-all duration-300 hover:scale-105">
+
+                        <Link href="/services" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Services
                         </Link>
-                        <Link href="/portfolio" className="text-[#24224C] px-3 py-2 text-sm font-bold transition-all duration-300 hover:scale-105">
+                        <Link href="/portfolio" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Portfolio
                         </Link>
-                        <Link href="/why-us" className="text-[#24224C] px-3 py-2 text-sm font-bold transition-all duration-300 hover:scale-105">
+                        <Link href="/why-us" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Why Us
                         </Link>
-                        <Link href="/testimonials" className="text-[#24224C] px-3 py-2 text-sm font-bold transition-all duration-300 hover:scale-105">
+                        <Link href="/testimonials" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Testimonials
                         </Link>
-                        <Link href="/contact" className="text-[#24224C] px-3 py-2 text-sm font-bold transition-all duration-300 hover:scale-105">
+                        <Link href="/contact" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Contact Us
                         </Link>
-                        <Link
-                            href="/get-started"
-                            className="bg-[#55185C] text-white px-4 py-2 rounded-md text-sm font-bold transition-all duration-300 hover:scale-105 transform"
-                        >
+                        <Link href="/get-started" className="bg-[#55185C] text-white px-4 py-2 rounded-md text-md transition-all duration-500 hover:-translate-y-1 transform">
                             Get Started
                         </Link>
+                        
                     </div>
 
                     <div className="md:hidden">
