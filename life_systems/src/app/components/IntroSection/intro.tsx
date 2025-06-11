@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const HeroSection = () => {
     return (
      <section className="relative bg-gray-100 min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-16 overflow-hidden">
@@ -19,11 +20,11 @@ const HeroSection = () => {
 
     {/* Logo Section (Top on mobile, Right on desktop) */}
     <div className="flex justify-center md:justify-end order-1 md:order-2">
-      <div className="text-center md:text-right">
+      <div className="text-center md:text-right animate-[bounce_20s_ease-in-out_infinite]">
         <img
           src="./logos/life_systems_logo_without_bg.png"
           alt="Life Systems Inc Logo"
-          className="mx-auto md:mx-0 w-64 sm:w-72 md:w-80 lg:w-[22rem] xl:w-[26rem]"
+          className="mx-auto md:mx-0 w-64 sm:w-72 md:w-80 lg:w-[50rem] xl:w-[50rem]"
         />
       </div>
     </div>
@@ -31,12 +32,12 @@ const HeroSection = () => {
     {/* Text Content Section (Bottom on mobile, Left on desktop) */}
     <div className="space-y-6 order-2 md:order-1">
       <div>
-        <span className="inline-block bg-[#55185C] text-white text-xs font-semibold px-4 py-1 rounded-full">
+        <span className="inline-block bg-[#55185C] text-white text-sm font-semibold px-4 py-1 rounded-full">
           Innovation Software Solution
         </span>
       </div>
 
-      <h1 className="text-4xl sm:text-5xl font-bold text-[#1E1E1E]">
+      <h1 className="text-4xl lg:text-6xl font-bold text-[#1E1E1E]">
         Innovating The Way <br />
         <span className="text-[#55185C]">You Connect</span> With <br /> Technology
       </h1>
