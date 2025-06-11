@@ -1,3 +1,5 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 @import "tailwindcss";
 
 :root {
@@ -31,6 +33,13 @@
 @font-face {
   font-family: 'inter_Extra_bold';
   src: url('/public/fonts/Inter_18pt-ExtraBold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter_SemiBold';
+  src: url('/public/fonts/inter_SemiBold.ttf');
   font-weight: normal;
   font-style: normal;
 }
