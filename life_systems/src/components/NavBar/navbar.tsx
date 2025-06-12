@@ -80,11 +80,11 @@ const Navbar = () => {
                             <div className="px-2 pt-2 pb-4 space-y-1">
                                 {[
                                     { href: "/", text: "Home" },
-                                    { href: "/services", text: "Services" },
-                                    { href: "/portfolio", text: "Portfolio" },
-                                    { href: "/why-us", text: "Why Us" },
-                                    { href: "/testimonials", text: "Testimonials" },
-                                    { href: "/contact", text: "Contact Us" },
+                                    { href: "#services", text: "Services" },
+                                    { href: "#portfolio", text: "Portfolio" },
+                                    { href: "#why_us", text: "Why Us" },
+                                    { href: "#testimonials", text: "Testimonials" },
+                                    { href: "#contact", text: "Contact Us" },
                                 ].map((item, index) => (
                                     <Link
                                         key={item.href}
