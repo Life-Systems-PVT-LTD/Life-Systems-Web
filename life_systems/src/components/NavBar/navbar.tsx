@@ -96,7 +96,7 @@ const Navbar = () => {
                                     </Link>
                                 ))}
                                 <Link
-                                    href="/get-started"
+                                    href="#contact"
                                     className="block px-3 py-2 rounded-md text-base font-bold text-center text-white bg-[#55185C] transition-all duration-300 transform hover:scale-105"
                                     style={{ transitionDelay: "300ms" }}
                                 >
