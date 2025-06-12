@@ -22,7 +22,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-5">
+                    <div className="hidden lg:flex items-center space-x-5">
 
                         <Link href="/" className="text-[#24224C] px-4 py-2 text-md font-semibold transition-transform duration-700 ease-in-out hover:-translate-y-1 hover:text-[#6a2971]">
                             Home
@@ -49,7 +49,7 @@ const Navbar = () => {
                         
                     </div>
 
-                    <div className="md:hidden">
+                    <div className="lg:hidden">
 
                         <input type="checkbox" id="mobile-menu" className="hidden peer" />
 

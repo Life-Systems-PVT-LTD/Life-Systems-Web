@@ -1,8 +1,48 @@
+'use client';
+
 import React from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaClock } from 'react-icons/fa';
 import styles from './contact.module.css';
+import SuccessAlert from '../alerts/success_alert/SuccessAlert';
+import ErrorAlert from '../alerts/error_alert/ErrorAlert';
 
 const Contact = () => {
+    // success mesage state
+    const [showSuccess, setShowSuccess] = React.useState(false);
+    // error message state
+    const [errorMessage, setErrorMessage] = React.useState('');
+    const [showError, setShowError] = React.useState(false);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+
+        e.preventDefault();
+
+        const form = e.target as HTMLFormElement;
+        const formData = new FormData(form);
+
+        const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            contact: formData.get("contact"),
+            subject: formData.get("subject"),
+            message: formData.get("message"),
+        };
+
+        const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+            setShowSuccess(true);
+            form.reset();
+        } else {
+            setErrorMessage("Failed to send message. Try again later.");
+            setShowError(true);
+        }
+    };
+
 
     return (
 
@@ -92,59 +132,93 @@ const Contact = () => {
 
                 {/* Right Side - Form */}
                 <div className="bg-[#FCFCFC] p-8 rounded-lg shadow-lg shadow-gray-300">
-                    <form className="sm:grid sm:grid-cols-2 gap-4 space-y-6">
-                        <div className="sm:col-start-1 relative">
-                            <input
-                                className="peer w-full px-3 py-4 bg-inherit border-2 rounded-lg outline-none transition border-[#dee2e6] focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB]"
-                                type="text"
-                                placeholder=""
-                            />
-                            <label
-                                className="absolute left-3 top-4 text-[#212529] text-base bg-white px-1 transition-all duration-150 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#6A2971]"
-                            >
+
+                    {/* success message alert */}
+                    {showSuccess && <SuccessAlert onClose={() => setShowSuccess(false)} />}
+                    {/* success message alert */}
+
+                    {/* Error Message alert */}
+                    {showError && <ErrorAlert message={errorMessage} onClose={() => setShowError(false)} />}
+                    {/* Error Message alert */}
+
+                    <form className="grid sm:grid-cols-2 gap-6" onSubmit={handleSubmit}>
+                        {/* Name */}
+                        <div className="relative">
+
+                            <input type="text" name="name" id="name" placeholder="Your Name" required className="peer w-full border-2 border-gray-300 rounded-lg px-3 pt-6 pb-2 text-base placeholder-transparent focus:outline-none focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB]" />
+
+                            <label htmlFor="name" className="absolute left-3 top-2 text-sm font-semibold text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#6A2971] bg-white px-1">
+
                                 Your Name
+
                             </label>
-                        </div>
-                        <div className="sm:col-start-2 relative">
-                            <input
-                                className="peer w-full px-3 py-4 bg-inherit border-2 rounded-lg outline-none transition border-[#dee2e6] focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB]"
-                                type="text"
-                                placeholder=""
-                            />
-                            <label
-                                className="absolute left-3 top-4 text-[#212529] text-base bg-white px-1 transition-all duration-150 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#6A2971]"
-                            >
-                                Your Email
-                            </label>
-                        </div>
-                        <div className="sm:col-span-2 relative">
-                            <input
-                                className="peer w-full px-3 py-4 bg-inherit border-2 rounded-lg outline-none transition border-[#dee2e6] focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB]"
-                                type="text"
-                                placeholder=""
-                            />
-                            <label
-                                className="absolute left-3 top-4 text-[#212529] text-base bg-white px-1 transition-all duration-150 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#6A2971]"
-                            >
-                                Subject
-                            </label>
-                        </div>
-                        <div className="sm:col-span-2 relative">
-                            <textarea
-                                rows={4}
-                                placeholder=""
-                                className="peer w-full px-3 py-4 bg-inherit border-2 rounded-lg outline-none transition border-[#dee2e6] focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB] resize-none"
-                            ></textarea>
-                            <label
-                                className="absolute left-3 top-4 text-[#212529] text-base bg-white px-1 transition-all duration-150 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#6A2971]"
-                            >
-                                Your Message
-                            </label>
+
                         </div>
 
-                        <button className="sm:col-span-2 w-full bg-[#6A2971] hover:bg-[#5A2260] active:bg-[#0a58ca] text-white text-xl py-2 px-4 rounded-lg transition-all ">Send Message</button>
+                        {/* Email */}
+                        <div className="relative">
+
+                            <input type="email" name="email" id="email"placeholder="Your Email"required className="peer w-full border-2 border-gray-300 rounded-lg px-3 pt-6 pb-2 text-base placeholder-transparent focus:outline-none focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB]"/>
+
+                            <label htmlFor="email" className="absolute left-3 top-2 text-sm font-semibold text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#6A2971] bg-white px-1" >
+
+                                Your Email
+
+                            </label>
+
+                        </div>
+
+                        {/* Contact */}
+                        <div className="relative sm:col-span-2">
+
+                            <input type="text" name="contact" id="contact" placeholder="Contact Number" required className="peer w-full border-2 border-gray-300 rounded-lg px-3 pt-6 pb-2 text-base placeholder-transparent focus:outline-none focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB]"/>
+
+                            <label htmlFor="contact" className="absolute left-3 top-2 text-sm font-semibold text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#6A2971] bg-white px-1">
+
+                                Contact Number
+
+                            </label>
+
+                        </div>
+
+                        {/* Subject */}
+                        <div className="relative sm:col-span-2">
+
+                            <input type="text" name="subject" id="subject" placeholder="Subject" required className="peer w-full border-2 border-gray-300 rounded-lg px-3 pt-6 pb-2 text-base placeholder-transparent focus:outline-none focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB]" />
+
+                            <label htmlFor="subject" className="absolute left-3 top-2 text-sm font-semibold text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#6A2971] bg-white px-1">
+
+                                Subject
+
+                            </label>
+
+                        </div>
+
+                        {/* Message */}
+                        <div className="relative sm:col-span-2">
+
+                            <textarea name="message" id="message" rows={4} placeholder="Your Message"required className="peer w-full border-2 border-gray-300 rounded-lg px-3 pt-6 pb-2 text-base placeholder-transparent resize-none focus:outline-none focus:border-[#6A2971] focus:ring-4 focus:ring-[#DAC9DB]"></textarea>
+
+                            <label htmlFor="message" className="absolute left-3 top-2 text-sm font-semibold text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#6A2971] bg-white px-1">
+
+                                Your Message
+
+                            </label>
+
+                        </div>
+
+                        {/* Submit */}
+                        
+                        <button type="submit" className="sm:col-span-2 w-full bg-[#6A2971] hover:bg-[#5A2260] text-white text-lg font-medium py-3 px-4 rounded-lg transition">
+
+                            Send Message
+
+                        </button>
+
                     </form>
+
                 </div>
+                
             </div>
 
             {/* Contact Content */}
