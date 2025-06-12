@@ -1,0 +1,55 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* fonts-start */
+
+@font-face {
+  font-family: 'inter_light';
+  src: url('/public/fonts/Inter_24pt-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter_bold';
+  src: url('/public/fonts/Inter_24pt-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter_Extra_bold';
+  src: url('/public/fonts/Inter_18pt-ExtraBold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter_SemiBold';
+  src: url('/public/fonts/inter_SemiBold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* fonts-end */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+

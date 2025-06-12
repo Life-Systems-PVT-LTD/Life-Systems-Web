@@ -1,0 +1,18 @@
+.contactIcon {
+    font-size: 1.5rem;
+    color: #6A2971;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff1a;
+    border-radius: 50%;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
